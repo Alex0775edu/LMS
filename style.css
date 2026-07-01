@@ -102,6 +102,16 @@ body {
   transform: scale(1.2);
 }
 
+/* Pricing cards */
+.pricing-card {
+  transition: 0.3s;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+
 /* Instructor card */
 .instructor-card img {
   transition: 0.3s;
