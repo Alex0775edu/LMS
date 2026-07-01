@@ -16,7 +16,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--white);
   color: var(--text-dark);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 1.0s, color 1.0s;
 }
 
 /* Top bar */

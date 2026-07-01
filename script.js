@@ -1,25 +1,8 @@
-// script.js
-
 // Initialize AOS animations
 AOS.init({
   duration: 800,
   once: false,
   mirror: false
-});
-
-// Dark / Light mode toggle
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  const icon = themeToggle.querySelector('i');
-  if (body.classList.contains('dark-mode')) {
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-  } else {
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-  }
 });
 
 // Sticky Navbar background change on scroll
@@ -90,13 +73,6 @@ window.addEventListener('scroll', () => {
     }
   });
 });
-
-// FAQ accordion (Bootstrap handles it, but we ensure smooth)
-// Search bar simple alert
-document.querySelector('.search-icon')?.addEventListener('click', () => {
-  alert('Search feature coming soon!');
-});
-
 // Mobile menu close on link click
 document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
   link.addEventListener('click', () => {
@@ -106,5 +82,3 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
     }
   });
 });
-
-console.log('EduNexus LMS ready - beginner friendly code!');
