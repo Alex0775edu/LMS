@@ -1,0 +1,160 @@
+/* style.css */
+:root {
+  --primary: #2563EB;
+  --secondary: #7C3AED;
+  --accent: #06B6D4;
+  --white: #ffffff;
+  --light-bg: #f8f9fa;
+  --dark-bg: #1e1e2f;
+  --text-dark: #212529;
+  --text-light: #f8f9fa;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+  --radius: 18px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--white);
+  color: var(--text-dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #12141D;
+  color: #e0e0e0;
+}
+body.dark-mode .navbar,
+body.dark-mode .bg-white,
+body.dark-mode .category-card,
+body.dark-mode .course-card,
+body.dark-mode .instructor-card,
+body.dark-mode .accordion-item,
+body.dark-mode .accordion-button {
+  background-color: #1f2137 !important;
+  color: #f0f0f0;
+}
+body.dark-mode .navbar .nav-link,
+body.dark-mode .text-muted {
+  color: #b0b0b0 !important;
+}
+
+/* Top bar */
+.top-bar a:hover { color: var(--accent) !important; }
+
+/* Navbar link underline animation */
+.navbar .nav-link {
+  position: relative;
+  font-weight: 500;
+}
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: 0.3s;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+  padding: 4rem 0;
+}
+.hero-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(37,99,235,0.08);
+  z-index: 0;
+}
+.shape-1 { width: 180px; height: 180px; top: 10%; left: -5%; }
+.shape-2 { width: 130px; height: 130px; bottom: 5%; right: -3%; background: rgba(124,58,237,0.1); }
+
+/* Category cards */
+.category-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+.category-card i {
+  transition: 0.3s;
+}
+.category-card:hover i {
+  transform: scale(1.2) rotate(-5deg);
+  color: var(--secondary);
+}
+
+/* Course cards */
+.course-card {
+  transition: 0.3s;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+.course-card img {
+  transition: 0.4s;
+}
+.course-card:hover img {
+  transform: scale(1.05);
+}
+.wishlist-icon:hover {
+  color: #ff4d6d !important;
+  transform: scale(1.2);
+}
+
+/* Instructor card */
+.instructor-card img {
+  transition: 0.3s;
+}
+.instructor-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: var(--secondary);
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.3);
+}
+.btn-outline-primary:hover {
+  transform: scale(1.03);
+}
+
+/* Footer links */
+footer a:hover {
+  color: white !important;
+  padding-left: 5px;
+  transition: 0.2s;
+}
+
+/* Scroll top */
+#scrollTopBtn {
+  display: none;
+  z-index: 999;
+}
